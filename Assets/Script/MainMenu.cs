@@ -5,11 +5,13 @@ public class MainMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("ChooseCompanion");
+        Debug.Log("START BUTTON CLICKED");
+        SceneManager.LoadScene(1);
     }
 
     public void OpenInstruction()
     {
-        SceneManager.LoadScene("Instruction");
+        Debug.Log("INSTRUCTION BUTTON CLICKED");
+        SceneManager.LoadScene(2);
     }
 }
