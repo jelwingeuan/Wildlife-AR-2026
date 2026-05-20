@@ -3,15 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void StartGame()
+    public void MoveToScene(int sceneID)
     {
-        Debug.Log("START BUTTON CLICKED");
-        SceneManager.LoadScene(1);
-    }
-
-    public void OpenInstruction()
-    {
-        Debug.Log("INSTRUCTION BUTTON CLICKED");
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(sceneID);
     }
 }
