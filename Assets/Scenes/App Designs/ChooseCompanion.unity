@@ -494,17 +494,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380884219}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1842703848}
-  m_Father: {fileID: 2115104010}
+  m_Father: {fileID: 1896960400}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -212.97998, y: -265}
+  m_AnchoredPosition: {x: 0.000015258789, y: -419.00003}
   m_SizeDelta: {x: 425.9641, y: 379.951}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &380884221
@@ -1281,17 +1281,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876004006}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 467430588}
-  m_Father: {fileID: 2115104010}
+  m_Father: {fileID: 1896960400}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -378, y: 758}
+  m_AnchoredPosition: {x: -165.02, y: 604.00006}
   m_SizeDelta: {x: 285.38, y: 302.4934}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &876004008
@@ -1706,7 +1706,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1035678264}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 884031734}
+        m_TargetAssemblyTypeName: ChooseYourCompanion, Assembly-CSharp
+        m_MethodName: MoveToScene
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1035678264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2459,6 +2471,8 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1338543980}
+  - {fileID: 380884220}
+  - {fileID: 876004007}
   m_Father: {fileID: 2115104010}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2584,10 +2598,8 @@ RectTransform:
   - {fileID: 890705993}
   - {fileID: 2116230761}
   - {fileID: 1035678262}
-  - {fileID: 380884220}
   - {fileID: 1718420887}
   - {fileID: 1896960400}
-  - {fileID: 876004007}
   m_Father: {fileID: 884031733}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
