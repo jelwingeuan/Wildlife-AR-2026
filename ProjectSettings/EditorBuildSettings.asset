@@ -21,8 +21,14 @@ EditorBuildSettings:
     path: Assets/Scenes/App Designs/Feeding 1.unity
     guid: c2b160118ed414c1cbc43ea32342c623
   - enabled: 1
+    path: Assets/Scenes/App Designs/Feeding 2.unity
+    guid: 40cc584086ef84b88b1b9813c991ca9f
+  - enabled: 1
     path: Assets/Scenes/App Designs/AR Cam 1.unity
     guid: 53667f74780e34527add55f672abd2ea
+  - enabled: 1
+    path: Assets/Scenes/App Designs/AR Cam 2.unity
+    guid: ce118ffdc8bf241d38888bed381badc5
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 69f6bf500b5e44be680883ad8b794e97, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 591a6086126ac409f91b615559f4f6d7, type: 2}
