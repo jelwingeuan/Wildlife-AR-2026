@@ -7,7 +7,7 @@ Users can choose an endangered animal, place it in the real world using AR, and 
 ## Project Overview
 
 This project was created for **MMD6246 Immersive Media Design 4**.  
-The assignment requires an AR application focused on endangered species, including their habitat, behaviour, and threat level. :contentReference[oaicite:0]{index=0}
+The assignment requires an AR application focused on endangered species, including their habitat, behaviour, and threat level.
 
 ## Target Users
 
