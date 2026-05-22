@@ -1,5 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 
@@ -10,15 +13,44 @@ public class ARAnimalPlacer : MonoBehaviour
     [SerializeField] private ARRaycastManager arRaycastManager;
     [SerializeField] private ARPlaneManager arPlaneManager;
 
-    [Header("Animal")]
+    [Header("Baby Animal")]
     [SerializeField] private GameObject animalPrefab;
-    [SerializeField] private float animalScale = 0.3f;
+    [SerializeField] private float animalScale = 0.05f;
     [SerializeField] private float spawnYOffset = 0.02f;
 
+    [Header("Adult Animal")]
+    [SerializeField] private GameObject adultAnimalPrefab;
+    [SerializeField] private float adultAnimalScale = 0.08f;
+
+    [Header("Heart UI")]
+    [SerializeField] private Image heartImage;
+    [SerializeField] private Sprite blankHeartSprite;
+    [SerializeField] private Sprite halfHeartSprite;
+    [SerializeField] private Sprite fullHeartSprite;
+
+    [Header("Food Buttons")]
+    [SerializeField] private Button chickenButton;
+    [SerializeField] private Button meatButton;
+    [SerializeField] private Button bananaButton;
+
+    [Header("Animation Trigger Names")]
+    [SerializeField] private string jumpTriggerName = "JumpTrigger";
+    [SerializeField] private string runTriggerName = "RunTrigger";
+
     private GameObject spawnedAnimal;
+    private Animator animalAnimator;
+
     private bool animalPlaced = false;
+    private bool isAdult = false;
+    private int lifePoint = 0;
 
     private static readonly List<ARRaycastHit> hits = new List<ARRaycastHit>();
+
+    private void Start()
+    {
+        UpdateHeartUI();
+        SetFoodButtons(true);
+    }
 
     private void Update()
     {
@@ -31,6 +63,9 @@ public class ARAnimalPlacer : MonoBehaviour
         Touch touch = Input.GetTouch(0);
 
         if (touch.phase != TouchPhase.Began)
+            return;
+
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject(touch.fingerId))
             return;
 
         PlaceAnimalInFrontOfCamera();
@@ -52,19 +87,155 @@ public class ARAnimalPlacer : MonoBehaviour
             spawnedAnimal = Instantiate(animalPrefab, spawnPosition, spawnRotation);
             spawnedAnimal.transform.localScale = Vector3.one * animalScale;
 
-            // Helps the animal stay anchored in AR space.
             spawnedAnimal.AddComponent<ARAnchor>();
+
+            animalAnimator = spawnedAnimal.GetComponentInChildren<Animator>();
 
             animalPlaced = true;
 
             HidePlanes();
 
-            Debug.Log("Tiger spawned in front of camera.");
+            Debug.Log("Baby tiger spawned.");
         }
         else
         {
             Debug.LogWarning("No detected AR surface in front of camera.");
         }
+    }
+
+    public void FeedChicken()
+    {
+        FeedCorrectFood();
+    }
+
+    public void FeedMeat()
+    {
+        FeedCorrectFood();
+    }
+
+    public void FeedBanana()
+    {
+        FeedWrongFood();
+    }
+
+    private void FeedCorrectFood()
+    {
+        if (!animalPlaced)
+        {
+            Debug.Log("Place the tiger first.");
+            return;
+        }
+
+        if (isAdult)
+        {
+            Debug.Log("Tiger is already adult. Feeding disabled.");
+            return;
+        }
+
+        lifePoint += 50;
+        lifePoint = Mathf.Clamp(lifePoint, 0, 100);
+
+        PlayJumpAnimation();
+        UpdateHeartUI();
+
+        Debug.Log("Correct food. Life Point: " + lifePoint);
+
+        if (lifePoint >= 100)
+        {
+            StartCoroutine(EvolveToAdult());
+        }
+    }
+
+    private void FeedWrongFood()
+    {
+        if (!animalPlaced)
+        {
+            Debug.Log("Place the tiger first.");
+            return;
+        }
+
+        if (isAdult)
+        {
+            Debug.Log("Tiger is already adult. Feeding disabled.");
+            return;
+        }
+
+        lifePoint -= 50;
+        lifePoint = Mathf.Clamp(lifePoint, 0, 100);
+
+        PlayRunAnimation();
+        UpdateHeartUI();
+
+        Debug.Log("Wrong food. Life Point: " + lifePoint);
+    }
+
+    private void PlayJumpAnimation()
+    {
+        if (animalAnimator != null)
+        {
+            animalAnimator.SetTrigger(jumpTriggerName);
+        }
+    }
+
+    private void PlayRunAnimation()
+    {
+        if (animalAnimator != null)
+        {
+            animalAnimator.SetTrigger(runTriggerName);
+        }
+    }
+
+    private IEnumerator EvolveToAdult()
+    {
+        isAdult = true;
+        SetFoodButtons(false);
+
+        yield return new WaitForSeconds(1.2f);
+
+        Vector3 position = spawnedAnimal.transform.position;
+        Quaternion rotation = spawnedAnimal.transform.rotation;
+
+        Destroy(spawnedAnimal);
+
+        spawnedAnimal = Instantiate(adultAnimalPrefab, position, rotation);
+        spawnedAnimal.transform.localScale = Vector3.one * adultAnimalScale;
+
+        spawnedAnimal.AddComponent<ARAnchor>();
+
+        animalAnimator = spawnedAnimal.GetComponentInChildren<Animator>();
+
+        Debug.Log("Tiger evolved into adult.");
+    }
+
+    private void UpdateHeartUI()
+    {
+        if (heartImage == null)
+            return;
+
+        if (lifePoint <= 0)
+        {
+            heartImage.sprite = blankHeartSprite;
+        }
+        else if (lifePoint == 50)
+        {
+            heartImage.sprite = halfHeartSprite;
+        }
+        else if (lifePoint >= 100)
+        {
+            heartImage.sprite = fullHeartSprite;
+        }
+    }
+
+    private void SetFoodButtons(bool enabled)
+    {
+        if (chickenButton != null)
+            chickenButton.interactable = enabled;
+
+        if (meatButton != null)
+            meatButton.interactable = enabled;
+
+        if (bananaButton != null)
+            bananaButton.interactable = enabled;
     }
 
     private Quaternion GetAnimalFacingCameraRotation(Vector3 animalPosition)
