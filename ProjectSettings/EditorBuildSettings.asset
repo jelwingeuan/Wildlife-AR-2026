@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/App Designs/#Model Test.unity
-    guid: ce6239c32057b40b7b86972ffc8c3ad5
   - enabled: 1
     path: Assets/Scenes/App Designs/MainMenu.unity
     guid: 39c72b21185fd4438aee20f966c9b4a2
@@ -17,18 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/App Designs/Instruction.unity
     guid: 585c59f7577b2446bb3e257b640cd164
-  - enabled: 1
-    path: Assets/Scenes/App Designs/Feeding 1.unity
-    guid: c2b160118ed414c1cbc43ea32342c623
-  - enabled: 1
-    path: Assets/Scenes/App Designs/Feeding 2.unity
-    guid: 40cc584086ef84b88b1b9813c991ca9f
-  - enabled: 1
-    path: Assets/Scenes/App Designs/AR Cam 1.unity
-    guid: 53667f74780e34527add55f672abd2ea
-  - enabled: 1
-    path: Assets/Scenes/App Designs/AR Cam 2.unity
-    guid: ce118ffdc8bf241d38888bed381badc5
   - enabled: 1
     path: Assets/Scenes/App Designs/WildlifeARScene.unity
     guid: 39d4d26d49af26a458902242995de747
