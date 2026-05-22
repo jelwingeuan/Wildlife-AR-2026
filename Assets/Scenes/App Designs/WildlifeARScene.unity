@@ -1097,8 +1097,8 @@ MonoBehaviour:
   arCamera: {fileID: 2100645315}
   arRaycastManager: {fileID: 413048841}
   arPlaneManager: {fileID: 413048842}
-  animalPrefab: {fileID: 8027716492403295891, guid: cd4509131845a2b46acfd24e48abaafa, type: 3}
-  animalScale: 0.01
+  animalPrefab: {fileID: 8549300642482494536, guid: 4eddc9f90f689b74f8c2c76168dcad21, type: 3}
+  animalScale: 0.03
   spawnYOffset: 0.02
 --- !u!1 &655636561
 GameObject:
@@ -1927,7 +1927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1994962293
 RectTransform:
   m_ObjectHideFlags: 0
