@@ -122,5 +122,4 @@ In progress:
 ## Author
 
 Created by **Healthy Gang**
-
 Project: **Wildlife AR Friend 2026**
