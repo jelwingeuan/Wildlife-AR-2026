@@ -53,16 +53,6 @@ public class ARAnimalPlacer : MonoBehaviour
     private void Start()
     {
         UpdateHeartUI();
-
-        if (chickenButton != null)
-            chickenButton.onClick.AddListener(FeedChicken);
-
-        if (meatButton != null)
-            meatButton.onClick.AddListener(FeedMeat);
-
-        if (bananaButton != null)
-            bananaButton.onClick.AddListener(FeedBanana);
-
         SetFoodButtons(true);
     }
 
@@ -152,7 +142,7 @@ public class ARAnimalPlacer : MonoBehaviour
         PlayJumpAnimation();
         UpdateHeartUI();
 
-        Debug.Log("Correct food. Feed Count: " + correctFeedCount + "/" + correctFeedsNeeded);
+        Debug.Log("Correct food tap: " + correctFeedCount + "/" + correctFeedsNeeded);
 
         if (correctFeedCount >= correctFeedsNeeded)
         {
@@ -180,7 +170,7 @@ public class ARAnimalPlacer : MonoBehaviour
         PlayRunAnimation();
         UpdateHeartUI();
 
-        Debug.Log("Wrong food. Feed Count: " + correctFeedCount + "/" + correctFeedsNeeded);
+        Debug.Log("Wrong food. Correct food tap count: " + correctFeedCount + "/" + correctFeedsNeeded);
     }
 
     private void PlayJumpAnimation()
@@ -221,7 +211,7 @@ public class ARAnimalPlacer : MonoBehaviour
 
         animalAnimator = spawnedAnimal.GetComponentInChildren<Animator>();
 
-        Debug.Log("Tiger evolved into adult.");
+        Debug.Log("Tiger evolved into adult after 4 correct food taps.");
     }
 
     private void UpdateHeartUI()
