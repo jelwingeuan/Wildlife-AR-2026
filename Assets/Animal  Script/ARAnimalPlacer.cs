@@ -33,6 +33,9 @@ public class ARAnimalPlacer : MonoBehaviour
     [SerializeField] private Button meatButton;
     [SerializeField] private Button bananaButton;
 
+    [Header("Feeding Settings")]
+    [SerializeField] private int correctFeedsNeeded = 4;
+
     [Header("Animation Trigger Names")]
     [SerializeField] private string jumpTriggerName = "JumpTrigger";
     [SerializeField] private string runTriggerName = "RunTrigger";
@@ -42,13 +45,24 @@ public class ARAnimalPlacer : MonoBehaviour
 
     private bool animalPlaced = false;
     private bool isAdult = false;
-    private int lifePoint = 0;
+
+    private int correctFeedCount = 0;
 
     private static readonly List<ARRaycastHit> hits = new List<ARRaycastHit>();
 
     private void Start()
     {
         UpdateHeartUI();
+
+        if (chickenButton != null)
+            chickenButton.onClick.AddListener(FeedChicken);
+
+        if (meatButton != null)
+            meatButton.onClick.AddListener(FeedMeat);
+
+        if (bananaButton != null)
+            bananaButton.onClick.AddListener(FeedBanana);
+
         SetFoodButtons(true);
     }
 
@@ -128,19 +142,19 @@ public class ARAnimalPlacer : MonoBehaviour
 
         if (isAdult)
         {
-            Debug.Log("Tiger is already adult. Feeding disabled.");
+            Debug.Log("Tiger is already adult.");
             return;
         }
 
-        lifePoint += 50;
-        lifePoint = Mathf.Clamp(lifePoint, 0, 100);
+        correctFeedCount++;
+        correctFeedCount = Mathf.Clamp(correctFeedCount, 0, correctFeedsNeeded);
 
         PlayJumpAnimation();
         UpdateHeartUI();
 
-        Debug.Log("Correct food. Life Point: " + lifePoint);
+        Debug.Log("Correct food. Feed Count: " + correctFeedCount + "/" + correctFeedsNeeded);
 
-        if (lifePoint >= 100)
+        if (correctFeedCount >= correctFeedsNeeded)
         {
             StartCoroutine(EvolveToAdult());
         }
@@ -156,17 +170,17 @@ public class ARAnimalPlacer : MonoBehaviour
 
         if (isAdult)
         {
-            Debug.Log("Tiger is already adult. Feeding disabled.");
+            Debug.Log("Tiger is already adult.");
             return;
         }
 
-        lifePoint -= 50;
-        lifePoint = Mathf.Clamp(lifePoint, 0, 100);
+        correctFeedCount--;
+        correctFeedCount = Mathf.Clamp(correctFeedCount, 0, correctFeedsNeeded);
 
         PlayRunAnimation();
         UpdateHeartUI();
 
-        Debug.Log("Wrong food. Life Point: " + lifePoint);
+        Debug.Log("Wrong food. Feed Count: " + correctFeedCount + "/" + correctFeedsNeeded);
     }
 
     private void PlayJumpAnimation()
@@ -192,6 +206,9 @@ public class ARAnimalPlacer : MonoBehaviour
 
         yield return new WaitForSeconds(1.2f);
 
+        if (spawnedAnimal == null)
+            yield break;
+
         Vector3 position = spawnedAnimal.transform.position;
         Quaternion rotation = spawnedAnimal.transform.rotation;
 
@@ -212,15 +229,15 @@ public class ARAnimalPlacer : MonoBehaviour
         if (heartImage == null)
             return;
 
-        if (lifePoint <= 0)
+        if (correctFeedCount <= 0)
         {
             heartImage.sprite = blankHeartSprite;
         }
-        else if (lifePoint == 50)
+        else if (correctFeedCount < correctFeedsNeeded)
         {
             heartImage.sprite = halfHeartSprite;
         }
-        else if (lifePoint >= 100)
+        else
         {
             heartImage.sprite = fullHeartSprite;
         }
