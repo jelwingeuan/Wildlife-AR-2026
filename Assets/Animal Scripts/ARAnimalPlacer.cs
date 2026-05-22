@@ -36,6 +36,11 @@ public class ARAnimalPlacer : MonoBehaviour
     [Header("Feeding Settings")]
     [SerializeField] private int correctFeedsNeeded = 4;
 
+    [Header("Animal Sounds")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip happySound;
+    [SerializeField] private AudioClip sadSound;
+
     [Header("Animation Trigger Names")]
     [SerializeField] private string jumpTriggerName = "JumpTrigger";
     [SerializeField] private string runTriggerName = "RunTrigger";
@@ -49,6 +54,21 @@ public class ARAnimalPlacer : MonoBehaviour
     private int correctFeedCount = 0;
 
     private static readonly List<ARRaycastHit> hits = new List<ARRaycastHit>();
+
+    private void Awake()
+    {
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
+
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+        }
+
+        audioSource.playOnAwake = false;
+    }
 
     private void Start()
     {
@@ -139,6 +159,7 @@ public class ARAnimalPlacer : MonoBehaviour
         correctFeedCount++;
         correctFeedCount = Mathf.Clamp(correctFeedCount, 0, correctFeedsNeeded);
 
+        PlaySound(happySound);
         PlayJumpAnimation();
         UpdateHeartUI();
 
@@ -167,10 +188,28 @@ public class ARAnimalPlacer : MonoBehaviour
         correctFeedCount--;
         correctFeedCount = Mathf.Clamp(correctFeedCount, 0, correctFeedsNeeded);
 
+        PlaySound(sadSound);
         PlayRunAnimation();
         UpdateHeartUI();
 
         Debug.Log("Wrong food. Correct food tap count: " + correctFeedCount + "/" + correctFeedsNeeded);
+    }
+
+    private void PlaySound(AudioClip clip)
+    {
+        if (audioSource == null)
+        {
+            Debug.LogWarning("AudioSource is missing.");
+            return;
+        }
+
+        if (clip == null)
+        {
+            Debug.LogWarning("AudioClip is missing. Please assign happySound or sadSound in Inspector.");
+            return;
+        }
+
+        audioSource.PlayOneShot(clip);
     }
 
     private void PlayJumpAnimation()

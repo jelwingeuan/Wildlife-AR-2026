@@ -1274,6 +1274,10 @@ MonoBehaviour:
   chickenButton: {fileID: 65748113}
   meatButton: {fileID: 1556617251}
   bananaButton: {fileID: 2102205873}
+  correctFeedsNeeded: 4
+  audioSource: {fileID: 0}
+  happySound: {fileID: 8300000, guid: 0ce16a6f35125478cbdd45d47bfee44c, type: 3}
+  sadSound: {fileID: 8300000, guid: 2dea6cfd7d0c446058baf427597ddf94, type: 3}
   jumpTriggerName: JumpTrigger
   runTriggerName: RunTrigger
 --- !u!1 &655636561
