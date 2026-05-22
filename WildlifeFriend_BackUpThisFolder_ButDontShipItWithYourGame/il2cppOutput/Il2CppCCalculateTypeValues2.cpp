@@ -11528,6 +11528,7 @@ struct ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048  : public MonoBe
 	ARPlaneManager_t9DA6C512BDCFFBEE8B3DAA7170EB3BFFDE26A928* ___arPlaneManager;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___animalPrefab;
 	float ___animalScale;
+	float ___spawnYOffset;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnedAnimal;
 	bool ___animalPlaced;
 };

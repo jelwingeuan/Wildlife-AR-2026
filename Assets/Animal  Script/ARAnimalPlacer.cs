@@ -12,7 +12,8 @@ public class ARAnimalPlacer : MonoBehaviour
 
     [Header("Animal")]
     [SerializeField] private GameObject animalPrefab;
-    [SerializeField] private float animalScale = 1f;
+    [SerializeField] private float animalScale = 0.3f;
+    [SerializeField] private float spawnYOffset = 0.02f;
 
     private GameObject spawnedAnimal;
     private bool animalPlaced = false;
@@ -32,43 +33,37 @@ public class ARAnimalPlacer : MonoBehaviour
         if (touch.phase != TouchPhase.Began)
             return;
 
-        TryPlaceAnimal(touch.position);
+        PlaceAnimalInFrontOfCamera();
     }
 
-    private void TryPlaceAnimal(Vector2 touchPosition)
+    private void PlaceAnimalInFrontOfCamera()
     {
-        Debug.Log("Screen touched. Trying to place animal...");
+        Vector2 screenCenter = new Vector2(Screen.width / 2f, Screen.height / 2f);
 
-        if (animalPrefab == null)
-        {
-            Debug.LogError("Animal Prefab is missing.");
-            return;
-        }
-
-        if (arRaycastManager == null)
-        {
-            Debug.LogError("AR Raycast Manager is missing.");
-            return;
-        }
-
-        if (arRaycastManager.Raycast(touchPosition, hits, TrackableType.PlaneWithinPolygon))
+        if (arRaycastManager.Raycast(screenCenter, hits, TrackableType.PlaneWithinPolygon))
         {
             Pose hitPose = hits[0].pose;
 
-            Quaternion rotation = GetAnimalFacingCameraRotation(hitPose.position);
+            Vector3 spawnPosition = hitPose.position;
+            spawnPosition.y += spawnYOffset;
 
-            spawnedAnimal = Instantiate(animalPrefab, hitPose.position, rotation);
+            Quaternion spawnRotation = GetAnimalFacingCameraRotation(spawnPosition);
+
+            spawnedAnimal = Instantiate(animalPrefab, spawnPosition, spawnRotation);
             spawnedAnimal.transform.localScale = Vector3.one * animalScale;
+
+            // Helps the animal stay anchored in AR space.
+            spawnedAnimal.AddComponent<ARAnchor>();
 
             animalPlaced = true;
 
             HidePlanes();
 
-            Debug.Log("Animal placed successfully.");
+            Debug.Log("Tiger spawned in front of camera.");
         }
         else
         {
-            Debug.LogWarning("No AR plane detected at touch position.");
+            Debug.LogWarning("No detected AR surface in front of camera.");
         }
     }
 

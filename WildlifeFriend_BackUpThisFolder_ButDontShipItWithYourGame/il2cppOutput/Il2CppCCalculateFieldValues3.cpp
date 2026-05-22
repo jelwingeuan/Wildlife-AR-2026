@@ -24905,6 +24905,7 @@ struct ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048  : public MonoBe
 	ARPlaneManager_t9DA6C512BDCFFBEE8B3DAA7170EB3BFFDE26A928* ___arPlaneManager;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___animalPrefab;
 	float ___animalScale;
+	float ___spawnYOffset;
 	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___spawnedAnimal;
 	bool ___animalPlaced;
 };
@@ -34281,9 +34282,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable11260[4] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable11262[1] = 
 {
 	static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_tF4C33508E55B3CC5FD508C859DAD3092934E777A_StaticFields, ___753D5E1ADA77B20B9959A1030B8E0BA5CF925F2881D3635C3F791E5A0AE0EEB1)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable11264[8] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable11264[9] = 
 {
-	static_cast<int32_t>(offsetof(ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048, ___arCamera)),static_cast<int32_t>(offsetof(ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048, ___arRaycastManager)),static_cast<int32_t>(offsetof(ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048, ___arPlaneManager)),static_cast<int32_t>(offsetof(ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048, ___animalPrefab)),static_cast<int32_t>(offsetof(ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048, ___animalScale)),static_cast<int32_t>(offsetof(ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048, ___spawnedAnimal)),static_cast<int32_t>(offsetof(ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048, ___animalPlaced)),static_cast<int32_t>(offsetof(ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048_StaticFields, ___hits)),};
+	static_cast<int32_t>(offsetof(ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048, ___arCamera)),static_cast<int32_t>(offsetof(ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048, ___arRaycastManager)),static_cast<int32_t>(offsetof(ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048, ___arPlaneManager)),static_cast<int32_t>(offsetof(ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048, ___animalPrefab)),static_cast<int32_t>(offsetof(ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048, ___animalScale)),static_cast<int32_t>(offsetof(ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048, ___spawnYOffset)),static_cast<int32_t>(offsetof(ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048, ___spawnedAnimal)),static_cast<int32_t>(offsetof(ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048, ___animalPlaced)),static_cast<int32_t>(offsetof(ARAnimalPlacer_tD5B1E61B3BE7F73744FF03356E5EBCD2ED22E048_StaticFields, ___hits)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable11265[2] = 
 {
 	static_cast<int32_t>(offsetof(Meshy_AI_Tiger_Cub_Portrait_0513081932_texture_tA2608556305D5967D1F886952958734BE26F12B2_StaticFields, ___IsAwake)),static_cast<int32_t>(offsetof(Meshy_AI_Tiger_Cub_Portrait_0513081932_texture_tA2608556305D5967D1F886952958734BE26F12B2, ___animator)),};

@@ -8,7 +8,7 @@
 
 
 extern void ARAnimalPlacer_Update_m41D2C0288E0DBAFD35644017D083D85A46F346BC (void);
-extern void ARAnimalPlacer_TryPlaceAnimal_m55EC05EA7AC749A69B6CC9B66DB9115D6C91495E (void);
+extern void ARAnimalPlacer_PlaceAnimalInFrontOfCamera_m7216AF4A8EAEC3CED0B1DDE06655CFC1EDE80C3B (void);
 extern void ARAnimalPlacer_GetAnimalFacingCameraRotation_m26444F2E693D65869B05F12BD8A44C5C27ED3C14 (void);
 extern void ARAnimalPlacer_HidePlanes_m9C0331A4588316569C2EBA993AA55C19ED736AC9 (void);
 extern void ARAnimalPlacer__ctor_mF50BC8354073EC59DCC1BA8F02E6D4AAA67F73B2 (void);
@@ -345,7 +345,7 @@ extern void U3CWarpTextU3Ed__8_System_Collections_IEnumerator_get_Current_m71D7F
 static Il2CppMethodPointer s_methodPointers[336] = 
 {
 	ARAnimalPlacer_Update_m41D2C0288E0DBAFD35644017D083D85A46F346BC,
-	ARAnimalPlacer_TryPlaceAnimal_m55EC05EA7AC749A69B6CC9B66DB9115D6C91495E,
+	ARAnimalPlacer_PlaceAnimalInFrontOfCamera_m7216AF4A8EAEC3CED0B1DDE06655CFC1EDE80C3B,
 	ARAnimalPlacer_GetAnimalFacingCameraRotation_m26444F2E693D65869B05F12BD8A44C5C27ED3C14,
 	ARAnimalPlacer_HidePlanes_m9C0331A4588316569C2EBA993AA55C19ED736AC9,
 	ARAnimalPlacer__ctor_mF50BC8354073EC59DCC1BA8F02E6D4AAA67F73B2,
@@ -707,7 +707,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[10] =
 static const int32_t s_InvokerIndices[336] = 
 {
 	17303,
-	13368,
+	17303,
 	11388,
 	17303,
 	17303,
