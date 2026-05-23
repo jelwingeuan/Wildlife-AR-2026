@@ -28,16 +28,16 @@ EditorBuildSettings:
     guid: eb82673be02003c4b9cb367fd46e4fb1
   - enabled: 1
     path: Assets/Scenes/App Designs/InsTiger.unity
-    guid: b23e197a6cdc648829257f27019b13d5
+    guid: a69cc42f983c3427fabbc4535d5c5517
   - enabled: 1
     path: Assets/Scenes/App Designs/InsElephant.unity
-    guid: d686a27ace47946e98871407baf1d335
+    guid: bc30d254b15d3416f853c5d3c6acbe79
   - enabled: 1
     path: Assets/Scenes/App Designs/InsTapir.unity
     guid: 45518b49cbee24ec0aad6383a6931e74
   - enabled: 1
-    path: Assets/Scenes/App Designs/InsTapir.unity
-    guid: 41e027b0b0a2943f0bb31462498cd5b0
+    path: Assets/Scenes/App Designs/InsGibbon.unity
+    guid: b674073c687a548808b88ac9484709cb
   - enabled: 1
     path: Assets/Scenes/App Designs/OptionsTiger.unity
     guid: 854fb5d806cd54789927d167e7fc5f54
