@@ -33,7 +33,7 @@ EditorBuildSettings:
     path: Assets/Scenes/App Designs/InsElephant.unity
     guid: d686a27ace47946e98871407baf1d335
   - enabled: 1
-    path: Assets/Scenes/App Designs/InsGibbon.unity
+    path: Assets/Scenes/App Designs/InsTapir.unity
     guid: 45518b49cbee24ec0aad6383a6931e74
   - enabled: 1
     path: Assets/Scenes/App Designs/InsTapir.unity
