@@ -1,0 +1,10 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class iElephant : MonoBehaviour
+{
+    public void MoveToScene(int sceneID)
+    {
+        SceneManager.LoadScene(sceneID);
+    }
+}
