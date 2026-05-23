@@ -1262,11 +1262,11 @@ MonoBehaviour:
   arCamera: {fileID: 2100645315}
   arRaycastManager: {fileID: 413048841}
   arPlaneManager: {fileID: 413048842}
-  animalPrefab: {fileID: 3008933745584473788, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
-  animalScale: 0.1
+  animalPrefab: {fileID: 2685764889468791359, guid: 4dd480d7f60481e40a49562b8edc843b, type: 3}
+  animalScale: 0.2
   spawnYOffset: 0.02
-  adultAnimalPrefab: {fileID: 3373237470277707663, guid: a6022df524bf1d4449579b1072dd7894, type: 3}
-  adultAnimalScale: 0.03
+  adultAnimalPrefab: {fileID: 4926214885556366092, guid: 44957c272ac31a84a9fa8a8934bf9cca, type: 3}
+  adultAnimalScale: 0.4
   heartImage: {fileID: 619071952}
   blankHeartSprite: {fileID: 21300000, guid: 269411a414bb6094bb7f766c9e66123a, type: 3}
   halfHeartSprite: {fileID: 21300000, guid: 00c569661395d374aa253d836f6ad6f9, type: 3}
@@ -2808,63 +2808,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102205871}
   m_CullTransparentMesh: 1
---- !u!1001 &7757647858601726187
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3008933745584473788, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
-      propertyPath: m_Name
-      value: 'Baby Lar Gibbon '
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2876,4 +2819,3 @@ SceneRoots:
   - {fileID: 119172308}
   - {fileID: 2071550323}
   - {fileID: 650387896}
-  - {fileID: 7757647858601726187}
