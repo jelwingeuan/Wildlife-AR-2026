@@ -26,6 +26,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/App Designs/TapirARScene.unity
     guid: eb82673be02003c4b9cb367fd46e4fb1
+  - enabled: 1
+    path: Assets/Scenes/App Designs/InsTiger.unity
+    guid: b23e197a6cdc648829257f27019b13d5
+  - enabled: 1
+    path: Assets/Scenes/App Designs/InsElephant.unity
+    guid: d686a27ace47946e98871407baf1d335
+  - enabled: 1
+    path: Assets/Scenes/App Designs/InsGibbon.unity
+    guid: 45518b49cbee24ec0aad6383a6931e74
+  - enabled: 1
+    path: Assets/Scenes/App Designs/InsTapir.unity
+    guid: 41e027b0b0a2943f0bb31462498cd5b0
+  - enabled: 1
+    path: Assets/Scenes/App Designs/Options.unity
+    guid: 854fb5d806cd54789927d167e7fc5f54
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 69f6bf500b5e44be680883ad8b794e97, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 591a6086126ac409f91b615559f4f6d7, type: 2}
