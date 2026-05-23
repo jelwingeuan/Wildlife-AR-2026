@@ -1411,8 +1411,8 @@ MonoBehaviour:
   bananaButton: {fileID: 2102205873}
   correctFeedsNeeded: 4
   audioSource: {fileID: 0}
-  happySound: {fileID: 0}
-  sadSound: {fileID: 0}
+  happySound: {fileID: 8300000, guid: 9c7d5ecf6f8ff4e6996e43214eb9a4c2, type: 3}
+  sadSound: {fileID: 8300000, guid: d595ee67f0f55401ab7593621e356107, type: 3}
   jumpTriggerName: JumpTrigger
   runTriggerName: RunTrigger
 --- !u!1 &655636561
