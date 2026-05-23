@@ -402,6 +402,7 @@ GameObject:
   - component: {fileID: 119172306}
   - component: {fileID: 119172305}
   - component: {fileID: 119172309}
+  - component: {fileID: 119172310}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -513,6 +514,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba4c2076a3f91ed4a8ad92293c22a8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WildlifeARScene
+--- !u!114 &119172310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119172304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e5eb8b3077f4374a5d7002b33cb8fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ElephantARScene
 --- !u!1 &276886440
 GameObject:
   m_ObjectHideFlags: 0
