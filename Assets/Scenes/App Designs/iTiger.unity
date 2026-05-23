@@ -466,7 +466,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 884031734}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Instruction, Assembly-CSharp
         m_MethodName: MoveToScene
         m_Mode: 3
@@ -756,9 +756,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 884031729}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2fab20904999407eba9afe6b04188b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 8fc72fb39cda34acf805a0e2d8f3b34b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Instruction
+  m_EditorClassIdentifier: Assembly-CSharp::iTiger
 --- !u!1 &890705992
 GameObject:
   m_ObjectHideFlags: 0
