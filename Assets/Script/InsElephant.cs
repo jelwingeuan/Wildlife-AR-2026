@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Feeding1 : MonoBehaviour
+public class InsElephant : MonoBehaviour
 {
     public void MoveToScene(int sceneID)
     {

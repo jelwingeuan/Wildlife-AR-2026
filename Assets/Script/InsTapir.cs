@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ARCam1 : MonoBehaviour
+public class InsTapir : MonoBehaviour
 {
     public void MoveToScene(int sceneID)
     {

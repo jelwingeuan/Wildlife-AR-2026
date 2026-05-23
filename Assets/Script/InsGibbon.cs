@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ARCam2 : MonoBehaviour
+public class InsGibbon : MonoBehaviour
 {
     public void MoveToScene(int sceneID)
     {

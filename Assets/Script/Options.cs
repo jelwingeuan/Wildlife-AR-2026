@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Feeding2 : MonoBehaviour
+public class Options : MonoBehaviour
 {
     public void MoveToScene(int sceneID)
     {
