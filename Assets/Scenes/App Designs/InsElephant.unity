@@ -604,13 +604,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 884031734}
-        m_TargetAssemblyTypeName: Instruction, Assembly-CSharp
+        m_TargetAssemblyTypeName: InsElephant, Assembly-CSharp
         m_MethodName: MoveToScene
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -794,7 +794,6 @@ GameObject:
   - component: {fileID: 884031731}
   - component: {fileID: 884031730}
   - component: {fileID: 884031734}
-  - component: {fileID: 884031735}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -894,21 +893,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 884031729}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2fab20904999407eba9afe6b04188b6, type: 3}
+  m_Script: {fileID: 11500000, guid: 67365e58581014f858764f7d26d58cc7, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Instruction
---- !u!114 &884031735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884031729}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3757cbd9e89b446b484c1e4f150c2639, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InsGibbon
+  m_EditorClassIdentifier: Assembly-CSharp::InsElephant
 --- !u!1 &890705992
 GameObject:
   m_ObjectHideFlags: 0
