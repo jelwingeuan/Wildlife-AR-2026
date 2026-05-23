@@ -50,6 +50,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/App Designs/OptionsTapir.unity
     guid: dfc53814c6e8740428a0d61e6765e224
+  - enabled: 1
+    path: Assets/Scenes/App Designs/iTiger.unity
+    guid: 4f4d95facfeaf49d1937b731368dce65
+  - enabled: 1
+    path: Assets/Scenes/App Designs/iElephant.unity
+    guid: adba54264813b45da9cf6d87bfba826d
+  - enabled: 1
+    path: Assets/Scenes/App Designs/iGibbon.unity
+    guid: 9a7cb567704324c04924245c3d3d7769
+  - enabled: 1
+    path: Assets/Scenes/App Designs/iTapir.unity
+    guid: 853aabf7015b64be783b9bf0292e119f
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 69f6bf500b5e44be680883ad8b794e97, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 591a6086126ac409f91b615559f4f6d7, type: 2}
