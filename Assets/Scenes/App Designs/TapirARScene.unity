@@ -1262,11 +1262,11 @@ MonoBehaviour:
   arCamera: {fileID: 2100645315}
   arRaycastManager: {fileID: 413048841}
   arPlaneManager: {fileID: 413048842}
-  animalPrefab: {fileID: 8549300642482494536, guid: 4eddc9f90f689b74f8c2c76168dcad21, type: 3}
-  animalScale: 0.03
+  animalPrefab: {fileID: 1815877673794881058, guid: f498960ba2220bb4d8a872a4b369888a, type: 3}
+  animalScale: 0.01
   spawnYOffset: 0.02
-  adultAnimalPrefab: {fileID: 6578233015635740642, guid: 6039955c2c9affb4a839c61159618f56, type: 3}
-  adultAnimalScale: 0.03
+  adultAnimalPrefab: {fileID: 5603606512959858005, guid: 17a7785838e0b924f96f4cce1bc1e915, type: 3}
+  adultAnimalScale: 0.02
   heartImage: {fileID: 619071952}
   blankHeartSprite: {fileID: 21300000, guid: 269411a414bb6094bb7f766c9e66123a, type: 3}
   halfHeartSprite: {fileID: 21300000, guid: 00c569661395d374aa253d836f6ad6f9, type: 3}
@@ -1274,6 +1274,10 @@ MonoBehaviour:
   chickenButton: {fileID: 65748113}
   meatButton: {fileID: 1556617251}
   bananaButton: {fileID: 2102205873}
+  correctFeedsNeeded: 4
+  audioSource: {fileID: 0}
+  happySound: {fileID: 0}
+  sadSound: {fileID: 0}
   jumpTriggerName: JumpTrigger
   runTriggerName: RunTrigger
 --- !u!1 &655636561

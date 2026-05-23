@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/App Designs/ElephantARScene.unity
     guid: 0e4c7a5fa20bbca41990e4fb0eb79085
+  - enabled: 1
+    path: Assets/Scenes/App Designs/LarGibbonARScene.unity
+    guid: 0a90b74df58969844bffea08c8b2bcfc
+  - enabled: 1
+    path: Assets/Scenes/App Designs/TapirARScene.unity
+    guid: eb82673be02003c4b9cb367fd46e4fb1
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 69f6bf500b5e44be680883ad8b794e97, type: 2}
     UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 591a6086126ac409f91b615559f4f6d7, type: 2}

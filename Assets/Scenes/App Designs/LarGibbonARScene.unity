@@ -234,7 +234,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a9fee66fd790c425397627a1a5bc553a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e022546250899144babbbc5f7e7afd27, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1262,10 +1262,10 @@ MonoBehaviour:
   arCamera: {fileID: 2100645315}
   arRaycastManager: {fileID: 413048841}
   arPlaneManager: {fileID: 413048842}
-  animalPrefab: {fileID: 8549300642482494536, guid: 4eddc9f90f689b74f8c2c76168dcad21, type: 3}
-  animalScale: 0.03
+  animalPrefab: {fileID: 3008933745584473788, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
+  animalScale: 0.1
   spawnYOffset: 0.02
-  adultAnimalPrefab: {fileID: 6578233015635740642, guid: 6039955c2c9affb4a839c61159618f56, type: 3}
+  adultAnimalPrefab: {fileID: 3373237470277707663, guid: a6022df524bf1d4449579b1072dd7894, type: 3}
   adultAnimalScale: 0.03
   heartImage: {fileID: 619071952}
   blankHeartSprite: {fileID: 21300000, guid: 269411a414bb6094bb7f766c9e66123a, type: 3}
@@ -1274,6 +1274,10 @@ MonoBehaviour:
   chickenButton: {fileID: 65748113}
   meatButton: {fileID: 1556617251}
   bananaButton: {fileID: 2102205873}
+  correctFeedsNeeded: 4
+  audioSource: {fileID: 0}
+  happySound: {fileID: 0}
+  sadSound: {fileID: 0}
   jumpTriggerName: JumpTrigger
   runTriggerName: RunTrigger
 --- !u!1 &655636561
@@ -2016,8 +2020,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.157959, y: -626}
-  m_SizeDelta: {x: 353.5032, y: 353.5032}
+  m_AnchoredPosition: {x: -7.3, y: -638.1}
+  m_SizeDelta: {x: 382.6, y: 353.5032}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1556617251
 MonoBehaviour:
@@ -2095,7 +2099,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0f231d8cc7e3c4ea997c2d66ee922d49, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 09f5214516a3e914d81217847c1b1d98, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2707,7 +2711,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 294.89648, y: -615.2124}
+  m_AnchoredPosition: {x: 305, y: -648.7}
   m_SizeDelta: {x: 353.5032, y: 353.5032}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2102205873
@@ -2786,7 +2790,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 87310fb6d09e9451ea26e14d1fa5b764, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 392974f1eb996454e8fba8453fba3da8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2804,6 +2808,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102205871}
   m_CullTransparentMesh: 1
+--- !u!1001 &7757647858601726187
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2488856582898572294, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3008933745584473788, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
+      propertyPath: m_Name
+      value: 'Baby Lar Gibbon '
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d98ab1c595b7ab24cbc0e894f5cb1358, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2815,3 +2876,4 @@ SceneRoots:
   - {fileID: 119172308}
   - {fileID: 2071550323}
   - {fileID: 650387896}
+  - {fileID: 7757647858601726187}
