@@ -39,7 +39,7 @@ EditorBuildSettings:
     path: Assets/Scenes/App Designs/InsTapir.unity
     guid: 41e027b0b0a2943f0bb31462498cd5b0
   - enabled: 1
-    path: Assets/Scenes/App Designs/Options.unity
+    path: Assets/Scenes/App Designs/OptionsTiger.unity
     guid: 854fb5d806cd54789927d167e7fc5f54
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 69f6bf500b5e44be680883ad8b794e97, type: 2}
