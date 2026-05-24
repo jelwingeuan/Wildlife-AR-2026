@@ -491,12 +491,12 @@ RectTransform:
   - {fileID: 65748112}
   - {fileID: 1556617250}
   - {fileID: 2102205872}
+  - {fileID: 1325080614}
   - {fileID: 647298947}
   - {fileID: 619071950}
   - {fileID: 523783414}
   - {fileID: 1490978848}
   - {fileID: 582199442}
-  - {fileID: 1325080614}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
